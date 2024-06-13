@@ -3,8 +3,6 @@
 using Alluseri.EvertalePonoserV2.API;
 using Alluseri.EvertalePonoserV2.Reroll;
 using System;
-using System.IO;
-using System.Linq;
 using System.Threading;
 
 namespace Alluseri.EvertalePonoserV2;
@@ -89,13 +87,25 @@ public static class Program {
 					Console.WriteLine("[API Test] Failed to connect to chat.");
 					throw;
 				}
+				if (Ec.Send("X" + Random.Shared.Next(9999) + "X lunahook.dev on top! Free rerolls for everyone! github.com/Alluseri/EvertalePonoserV2")) {
+					Thread.Sleep(500);
+				} else {
+					Console.WriteLine("[API Test] Failed to send local message.");
+					return;
+				}
 				if (Ec.Swap(true)) {
 					Thread.Sleep(500);
 				} else {
 					Console.WriteLine("[API Test] Failed to swap to global.");
 					return;
 				}
-				Console.WriteLine("[API Test] Is successful: " + Ec.Send("Get good, get lunahook.dev! Free rerolls for everyone."));
+				if (Ec.Send("X" + Random.Shared.Next(9999) + "X lunahook.dev on top! Free rerolls for everyone! github.com/Alluseri/EvertalePonoserV2")) {
+					Thread.Sleep(500);
+				} else {
+					Console.WriteLine("[API Test] Failed to send global message.");
+					return;
+				}
+				Console.WriteLine("API Test successful!");
 			}
 			break;
 			case "advertise": {
@@ -115,25 +125,25 @@ public static class Program {
 				try {
 					Ec = new(Evt);
 				} catch {
-					Console.WriteLine("[API Test] Failed to connect to chat.");
+					Console.WriteLine("Failed to connect to chat.");
 					throw;
 				}
-				if (Ec.Send("lunahook.dev on top! Free rerolls for everyone! " + Random.Shared.Next(0xFFFF))) {
+				if (Ec.Send("lunahook.dev on top! Free rerolls for everyone! " + Random.Shared.Next(9999))) {
 					Thread.Sleep(500);
 				} else {
-					Console.WriteLine("[API Test] Failed to send local message.");
+					Console.WriteLine("Failed to send local message.");
 					return;
 				}
 				if (Ec.Swap(true)) {
 					Thread.Sleep(500);
 				} else {
-					Console.WriteLine("[API Test] Failed to swap to global.");
+					Console.WriteLine("Failed to swap to global.");
 					return;
 				}
-				if (Ec.Send("lunahook.dev on top! Free rerolls for everyone! " + Random.Shared.Next(0xFFFF))) {
+				if (Ec.Send("lunahook.dev on top! Free rerolls for everyone! " + Random.Shared.Next(9999))) {
 					Thread.Sleep(500);
 				} else {
-					Console.WriteLine("[API Test] Failed to send global message.");
+					Console.WriteLine("Failed to send global message.");
 					return;
 				}
 				Console.WriteLine("Successfully advertised!");
@@ -156,25 +166,25 @@ public static class Program {
 				try {
 					Ec = new(Evt);
 				} catch {
-					Console.WriteLine("[API Test] Failed to connect to chat.");
+					Console.WriteLine("Failed to connect to chat.");
 					throw;
 				}
-				if (Ec.Send("X" + Random.Shared.Next(0xFFFF) + "X lunahook.dev on top! Free rerolls for everyone! This account restore code is " + Args[1])) {
+				if (Ec.Send("X" + Random.Shared.Next(9999) + "X lunahook.dev on top! Free rerolls for everyone! This account restore code is " + Args[1])) {
 					Thread.Sleep(500);
 				} else {
-					Console.WriteLine("[API Test] Failed to send local message.");
+					Console.WriteLine("Failed to send local message.");
 					return;
 				}
 				if (Ec.Swap(true)) {
 					Thread.Sleep(500);
 				} else {
-					Console.WriteLine("[API Test] Failed to swap to global.");
+					Console.WriteLine("Failed to swap to global.");
 					return;
 				}
-				if (Ec.Send("X" + Random.Shared.Next(0xFFFF) + "X lunahook.dev on top! Free rerolls for everyone! This account restore code is " + Args[1])) {
+				if (Ec.Send("X" + Random.Shared.Next(9999) + "X lunahook.dev on top! Free rerolls for everyone! This account restore code is " + Args[1])) {
 					Thread.Sleep(500);
 				} else {
-					Console.WriteLine("[API Test] Failed to send global message.");
+					Console.WriteLine("Failed to send global message.");
 					return;
 				}
 				Console.WriteLine("Successfully advertised!");

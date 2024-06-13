@@ -1,6 +1,10 @@
 # Evertale Ponoser v2
 Ponosing Evertale since 2022: 2024 edition.
 
+This is my last endeavour with this game and I'm never touching it again. If anyone is doing API abuse after the release of this app, it's not me. I simply don't care.
+
+Don't ask to update. I don't have Fiddler installed anymore.
+
 ## How to use
 Use the `help` subcommand, fuck around and find out. `test-api` should be called first but it is IP-bannable.
 
